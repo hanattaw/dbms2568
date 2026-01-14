@@ -7,4 +7,5 @@ services:
     environment:
       PGPASSWORD: ${STUDENT_PASSWORD}
     entrypoint: ["bash"]
-    
+    volumes:
+      - ./data:/data
