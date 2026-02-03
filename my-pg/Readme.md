@@ -95,8 +95,6 @@ Access the container and modify the settings to fit the 512MB RAM budget.
 # Enter the container shell
 docker exec -it pg_30_lab sh
 
-# Edit the configuration file
-vi /usr/local/pgsql/data/postgresql.conf
 ```
 
 > Task: Update the following parameters in postgresql.conf:
@@ -120,6 +118,12 @@ docker exec -it pg_30_lab pgbench -i -s 10 postgres
 
 # 2. Run the test for 60 seconds with 20 clients
 docker exec -it pg_30_lab pgbench -c 20 -j 2 -T 60 postgres
+```
+
+## Part 5: docker stats
+Run docker stat to see docker stats
+```
+docker stats
 ```
 
 ## Lab Report Questions
